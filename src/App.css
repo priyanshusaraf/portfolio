@@ -10,7 +10,6 @@
   overflow-y: hidden;
   font-family: "Roboto Slab", serif;
   background: #181717;
-  overflow-y: scroll;
   border: 1px solid black;
   scroll-behavior: smooth;
 }
@@ -64,11 +63,18 @@
   font-size: 100px;
   color: white;
 }
-
+.introduction i {
+  margin-right: 20px;
+  font-size: 30px;
+  margin-top: 30px;
+  color: white;
+}
+.introduction i:hover {
+  color: turquoise;
+  transition: 0.3s;
+}
 .introduction > h2 {
   color: white;
-  text-decoration: underline;
-  text-decoration-color: rgb(117, 253, 53);
 }
 a {
   text-decoration: none;

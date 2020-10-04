@@ -96,6 +96,12 @@ function App() {
           <h1>HI I AM PRIYANSHU...</h1>
 
           <h2>Full Stack Developer</h2>
+          <a href="https://instagram.com/saraf_priyanshu_" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-github"></i>
         </div>
         <div className="float-button">
           <svg
