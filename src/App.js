@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 AOS.init({
   duration: 1000,
@@ -16,19 +17,76 @@ function App() {
         <img src={require("./profile-pic.jpg")} class="profile-pic" alt="" />
         <ul class="navbar">
           <li>
-            <a href="home">Home</a>
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <a href=".about">About</a>
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              About
+            </Link>
           </li>
           <li>
-            <a href="portfolio">Portfolio</a>
+            <Link
+              activeClass="active"
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Skills
+            </Link>
           </li>
           <li>
-            <a href="testimonials">Testimonials</a>
+            <Link
+              activeClass="active"
+              to="portfolio"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Projects
+            </Link>
           </li>
           <li>
-            <a href="contact">Contact</a>
+            <Link
+              activeClass="active"
+              to="testimonials"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Testimonials
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
@@ -36,9 +94,24 @@ function App() {
         <div className="fancy"></div>
         <div className="introduction">
           <h1>HI I AM PRIYANSHU...</h1>
+
           <h2>Full Stack Developer</h2>
         </div>
-
+        <div className="float-button">
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-chat-left-fill"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+            />
+          </svg>
+        </div>
         <div class="icons">
           <div class="fancy-icons"></div>
           <div class="fancy-icon"></div>
@@ -65,26 +138,7 @@ function App() {
               world
             </h3>
           </div>
-          <div class="portfolio">
-            <h1>PROJECTS</h1>
-            <h4>Checkout some of my projects!</h4>
-            <div class="portfolio-images">
-              <img
-                src={require("./chatcord.png")}
-                data-aos="zoom-in"
-                alt="Chatcord"
-              />
-              <p>Real time chat app</p>
-              <img
-                src={require("./google-maps-challenge.png")}
-                class="google-maps"
-                alt=""
-                data-aos="zoom-in"
-                duration={0}
-              />
-              <p>Google maps Project</p>
-            </div>
-          </div>
+
           <div class="skills" onclick="">
             <h2>SKILLS</h2>
             <div class="skill">
@@ -118,6 +172,31 @@ function App() {
               </div>
             </div>
           </div>
+          <div class="portfolio">
+            <h1>PROJECTS</h1>
+            <h4>Checkout some of my projects!</h4>
+            <div class="portfolio-images">
+              <div className="project-image-1">
+                <img
+                  src={require("./google-maps-challenge.png")}
+                  data-aos="zoom-in"
+                  alt="Chatcord"
+                  className="google-maps-challenge"
+                />
+                <p>Google Maps Project</p>
+              </div>
+              <div className="project-image-1">
+                <img
+                  src={require("./Capture.JPG")}
+                  class="google-maps"
+                  alt=""
+                  data-aos="zoom-in"
+                  duration={0}
+                />
+                <p className="netflix-clone">Netflix clone</p>
+              </div>
+            </div>
+          </div>
 
           <div class="testimonials">
             <p class="testimony">TESTIMONIALS</p>
@@ -135,7 +214,27 @@ function App() {
               </div>
             </div>
           </div>
+          <div className="contact">
+            <h1>Contact</h1>
+            <div className="details">
+              <p>Address: 123 Fake street, Kolkata, west bengal</p>
+
+              <p>Phone:</p>
+              <p>home: (+91) 990 990 9900</p>
+              <p>personal: (+91) 990 990 9900</p>
+              <p>Here is my resume, download and view!</p>
+            </div>
+            <a href={require("./PRIYANSHU SARAF.pdf")} target="_blank" download>
+              <i class="fas fa-download"></i> Resume
+            </a>
+          </div>
+          {/*  do not delete this code baaddme aajaaio meeting wait fora few mins k? I think that zoom will take up a LOT of ram*/}
         </div>
+      </div>
+      <div className="footer">
+        <h4>
+          <i class="far fa-copyright"></i> Made with ❤ by Priyanshu Saraf
+        </h4>
       </div>
     </div>
   );

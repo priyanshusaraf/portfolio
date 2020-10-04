@@ -4,47 +4,71 @@
   box-sizing: border-box;
 }
 .app {
-  color: rgb(202, 200, 200);
+  color: rgb(233, 229, 229);
   font-weight: bold;
   overflow-x: hidden;
-
+  overflow-y: hidden;
+  font-family: "Roboto Slab", serif;
   background: #181717;
+  overflow-y: scroll;
+  border: 1px solid black;
+  scroll-behavior: smooth;
 }
-.fancy {
+/* .fancy {
   position: absolute;
   top: 10%;
   height: 100vh;
   width: 100%;
+
   z-index: 1;
   left: 5%;
   background-color: rgb(204, 204, 204);
-  border-radius: 0% 100% 0% 100% / 0% 0% 100% 100%;
-}
+  border-radius: 0% 100% 0% 100% / 53% 0% 100% 50%;
+} */
 
 .nav {
-  background: #181717;
+  background: #131313;
   position: fixed;
+  left: 50%;
+  transform: translate(-50%);
   z-index: 1000000000000000000000000000;
   border-radius: 40px;
   padding-top: 2px;
-  padding-bottom: 2px;
+
   padding-right: 10px;
-  width: 100%;
+  width: 90%;
   margin-bottom: 50px;
   padding-left: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.nav li a {
+  color: white;
+  padding-top: 5px;
+}
+.nav li a:hover {
+  color: rgb(228, 82, 29);
+  text-decoration: none;
+  transition: 0.3s;
 }
 .profile-pic {
   height: 70px;
   object-fit: cover;
   margin-left: 10px;
+  align-self: flex-start;
   width: 70px;
   border-radius: 50%;
 }
 .introduction > h1 {
   font-size: 100px;
-  color: black;
+  color: white;
+}
+
+.introduction > h2 {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: rgb(117, 253, 53);
 }
 a {
   text-decoration: none;
@@ -67,22 +91,11 @@ li {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   margin-top: 0px;
   z-index: -2;
 }
-.fancy-icons {
-  margin-top: 100px;
-  top: 5px;
-  left: 95px;
-  height: 313px;
-  width: 313px;
-  border-radius: 60% 40% 44% 56% / 37% 50% 50% 63%;
-  background-image: linear-gradient(45deg, #3023ae 0%, #f09 100%);
-  margin-right: -50px;
-  margin-top: 100px;
-  z-index: 2;
-  margin-bottom: 30px;
-}
+
 .home h2 {
   margin-left: 4px;
 }
@@ -92,14 +105,14 @@ li {
   height: 100px;
   width: 100px;
   border-radius: 60% 40% 44% 56% / 37% 50% 50% 63%;
-  background-image: linear-gradient(45deg, #3023ae 0%, #f09 100%);
+  background-image: linear-gradient(45deg, #0e0181 0%, turquoise 100%);
   z-index: 2;
 }
 .introduction {
   margin-top: 140px;
   margin-left: 80px;
   z-index: 2;
-
+  color: white;
   align-items: center;
 }
 h1 {
@@ -178,7 +191,11 @@ span {
   font-size: 32px;
 }
 .portfolio {
-  margin-top: 40px;
+  margin-top: 100px;
+}
+a:hover {
+  text-decoration: none;
+  color: orangered;
 }
 .portfolio > h1 {
   font-size: 60px;
@@ -189,11 +206,13 @@ span {
   margin-bottom: 30px;
   margin-top: 30px;
 }
-.portfolio img {
-  border-radius: 5px;
-  height: 356 !important;
-  margin-bottom: 10px;
+.google-maps-challenge {
+  display: flex;
+  object-fit: contain;
+  margin-top: -150px;
+  margin-bottom: -230px;
 }
+
 .about-heading h2 {
   color: rgb(224, 223, 223);
   margin-bottom: 10px;
@@ -209,11 +228,17 @@ span {
 .portfolio-images {
   margin-top: 40px;
   display: flex;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.google-maps {
+  height: 100%;
+  width: 100%;
 }
 .portfolio-images p {
   margin: 20px;
   font-size: 40px;
+  text-align: center;
 }
 .skills h2 {
   margin-top: 100px;
@@ -255,7 +280,7 @@ span {
   /*align-items: center;*/
 }
 .testimony {
-  margin-top: 120px;
+  margin-top: 10px;
   width: 100%;
 
   color: white;
@@ -267,4 +292,161 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.google-maps {
+  height: 180px;
+  margin-top: 70px;
+  width: 499px;
+}
+.project-image-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image-1 {
+  height: 600px;
+  width: 400px;
+}
+.netflix-clone {
+  padding-left: 40px;
+}
+.contact {
+  margin-top: 50px;
+  background-color: #0e0e0e;
+}
+/* Home details in portfolio kbse aane lag gye?? lol fixing it, but i have to put in my address(fake) ?k I dont think so ou dn't even need to mention "personal" besides number  kk, but let it be like this for now, we can fix everything which is text later on k? Basic layout is more important. Yeah just making the contact form look good now and then deploying it on beta server ig.. what about media queries???*/
+.contact > a {
+  background-color: rgb(12, 11, 11);
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+}
+.contact > a:hover {
+  text-decoration: none;
+  color: grey;
+}
+.details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+.footer {
+  background-color: #0e0e0e;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fancy-icon {
+  animation: shake 20s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.fancy-icons {
+  margin-top: 100px;
+  top: 5px;
+  left: 95px;
+  height: 313px;
+  width: 313px;
+  border-radius: 60% 40% 44% 56% / 37% 50% 50% 63%;
+  background-image: linear-gradient(45deg, turquoise, rgb(50, 4, 158) 100%);
+  margin-right: -50px;
+  margin-top: 100px;
+  z-index: 2;
+  margin-bottom: 30px;
+  animation: spin 50s linear infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-20px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(20px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-40px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(40px, 0, 0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    border-radius: 60% 40% 44% 56% / 37% 50% 50% 63%;
+  }
+
+  to {
+    transform: rotate(360deg);
+    border-radius: 32% 68% 38% 62% / 60% 36% 64% 40%;
+  }
+  10%,
+  90% {
+    translate: 2s;
+  }
+
+  20%,
+  80% {
+    transform: 4s;
+    border-radius: 32% 68% 38% 62% / 33% 40% 60% 67%;
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: 6s;
+  }
+
+  40%,
+  60% {
+    transform: 8s;
+  }
+}
+.float-button {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 86%;
+  right: 3%;
+  position: fixed;
+  background-color: rgb(255, 166, 0);
+  bottom: 0px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  opacity: 1;
+  border: 10px;
+
+  transform: rotate(0deg);
+}
+.float-button svg {
+  fill: white;
+  font-size: 28px;
+  margin-top: 5px;
+}
+
+.float-button i {
+  z-index: 100;
+}
+Link {
+  cursor: pointer;
 }
