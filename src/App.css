@@ -13,6 +13,9 @@
   border: 1px solid black;
   scroll-behavior: smooth;
 }
+.navbar li {
+  cursor: pointer;
+}
 /* .fancy {
   position: absolute;
   top: 10%;
@@ -30,7 +33,7 @@
   position: fixed;
   left: 50%;
   transform: translate(-50%);
-  z-index: 1000000000000000000000000000;
+  z-index: 1000;
   border-radius: 40px;
   padding-top: 2px;
 
@@ -365,7 +368,7 @@ a:hover {
   margin-top: 100px;
   z-index: 2;
   margin-bottom: 30px;
-  animation: spin 50s linear infinite;
+  animation: spin 10s linear infinite;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
@@ -396,33 +399,10 @@ a:hover {
 @keyframes spin {
   from {
     transform: rotate(0deg);
-    border-radius: 60% 40% 44% 56% / 37% 50% 50% 63%;
   }
 
   to {
     transform: rotate(360deg);
-    border-radius: 32% 68% 38% 62% / 60% 36% 64% 40%;
-  }
-  10%,
-  90% {
-    translate: 2s;
-  }
-
-  20%,
-  80% {
-    transform: 4s;
-    border-radius: 32% 68% 38% 62% / 33% 40% 60% 67%;
-  }
-
-  30%,
-  50%,
-  70% {
-    transform: 6s;
-  }
-
-  40%,
-  60% {
-    transform: 8s;
   }
 }
 .float-button {
@@ -512,15 +492,17 @@ form {
 }
 form > input {
   margin-bottom: 20px;
-  width: 58%;
-  background: rgb(83, 83, 83);
+  width: 40%;
+  background: rgb(39, 39, 39);
+  color: white;
   border: none;
 }
 
 form > textarea {
-  background: rgb(83, 83, 83);
+  background: rgb(39, 39, 39);
   border: none;
-  width: 58%;
+  color: white;
+  width: 40%;
   margin-bottom: 20px;
 }
 form > button {

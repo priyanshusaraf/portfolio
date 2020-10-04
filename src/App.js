@@ -1,16 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
+import queryString from "querystring";
+import { ToastContainer } from "react-toastify";
 import Carousel from "react-bootstrap/Carousel";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { ToastContaine, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 AOS.init({
   duration: 1000,
 });
 
 function App() {
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const sendMail = async (e) => {
+    e.preventDefault();
+    try {
+      if (!email || !subject || !message) {
+        return toast.error("All fields are required");
+      }
+      const res = axios.post(
+        "https://beta.atharvadeosthale.com/priyanshu.php",
+        queryString.stringify({ email, subject, message })
+      );
+      toast.success("E-Mail successfully sent!");
+    } catch (err) {
+      console.log(err);
+      toast.error("Something went wrong!");
+    }
+  };
   return (
     <div className="app">
       <div class="nav">
@@ -99,25 +123,20 @@ function App() {
           <a href="https://instagram.com/saraf_priyanshu_" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-linkedin"></i>
-          <i class="fab fa-github"></i>
-        </div>
-        <div className="float-button">
-          <svg
-            width="1em"
-            height="1em"
-            viewBox="0 0 16 16"
-            class="bi bi-chat-left-fill"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
+          <a href="https://facebook.com/priyanshu.saraf.58" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a
+            href="http://linkedin.com/in/priyanshu-saraf-0a97911ab"
+            target="_blank"
           >
-            <path
-              fill-rule="evenodd"
-              d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-            />
-          </svg>
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/priyanshusaraf" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
         </div>
+
         <div class="icons">
           <div class="fancy-icons"></div>
           <div class="fancy-icon"></div>
@@ -223,13 +242,23 @@ function App() {
           <div className="contact">
             <h1>Contact</h1>
             <div className="details">
-              <form action="">
-                <input type="text" placeholder="name" required />
-                <input type="text" placeholder="phone" required />
-                <input type="email" placeholder="email" required />
+              <form onSubmit={sendMail}>
+                <input
+                  type="email"
+                  placeholder="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="subject"
+                  onChange={(e) => setSubject(e.target.value)}
+                  required
+                />
 
                 <textarea
                   name="textarea"
+                  onChange={(e) => setMessage(e.target.value)}
                   id="message"
                   cols="30"
                   rows="10"
@@ -253,6 +282,7 @@ function App() {
           <i class="far fa-copyright"></i> Made with ❤ by Priyanshu Saraf
         </h4>
       </div>
+      <ToastContainer />
     </div>
   );
 }
