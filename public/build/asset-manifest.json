@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.da51ed3b.chunk.css",
+    "main.js": "/static/js/main.e7358eeb.chunk.js",
+    "main.js.map": "/static/js/main.e7358eeb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
+    "static/css/2.8ce86be7.chunk.css": "/static/css/2.8ce86be7.chunk.css",
+    "static/js/2.d7a9309a.chunk.js": "/static/js/2.d7a9309a.chunk.js",
+    "static/js/2.d7a9309a.chunk.js.map": "/static/js/2.d7a9309a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.3829a8319f6d52a313a53227716e98d0.js": "/precache-manifest.3829a8319f6d52a313a53227716e98d0.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.8ce86be7.chunk.css.map": "/static/css/2.8ce86be7.chunk.css.map",
+    "static/css/main.da51ed3b.chunk.css.map": "/static/css/main.da51ed3b.chunk.css.map",
+    "static/js/2.d7a9309a.chunk.js.LICENSE.txt": "/static/js/2.d7a9309a.chunk.js.LICENSE.txt",
+    "static/media/Babysitters (1).png": "/static/media/Babysitters (1).5eda6433.png",
+    "static/media/Babysitters.png": "/static/media/Babysitters.04c24860.png",
+    "static/media/Capture.JPG": "/static/media/Capture.b035f400.JPG",
+    "static/media/PRIYANSHU SARAF.pdf": "/static/media/PRIYANSHU SARAF.8ce2d93f.pdf",
+    "static/media/freelancer.png": "/static/media/freelancer.8645f237.png",
+    "static/media/google-maps-challenge.png": "/static/media/google-maps-challenge.00589f96.png",
+    "static/media/profile-pic.jpg": "/static/media/profile-pic.89854341.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19ccc7f6.js",
+    "static/css/2.8ce86be7.chunk.css",
+    "static/js/2.d7a9309a.chunk.js",
+    "static/css/main.da51ed3b.chunk.css",
+    "static/js/main.e7358eeb.chunk.js"
+  ]
+}

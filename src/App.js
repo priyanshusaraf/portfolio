@@ -223,11 +223,22 @@ function App() {
           <div className="contact">
             <h1>Contact</h1>
             <div className="details">
-              <p>Address: 123 Fake street, Kolkata, west bengal</p>
+              <form action="">
+                <input type="text" placeholder="name" required />
+                <input type="text" placeholder="phone" required />
+                <input type="email" placeholder="email" required />
 
-              <p>Phone:</p>
-              <p>home: (+91) 990 990 9900</p>
-              <p>personal: (+91) 990 990 9900</p>
+                <textarea
+                  name="textarea"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="enter text here"
+                />
+                <button type="submit" className="submit">
+                  submit
+                </button>
+              </form>
               <p>Here is my resume, download and view!</p>
             </div>
             <a href={require("./PRIYANSHU SARAF.pdf")} target="_blank" download>
